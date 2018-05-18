@@ -13,12 +13,14 @@ namespace BerrasBio.Controllers
 {
     public class HomeController : Controller
     {
+
         private readonly BerraContext _context;
 
         public HomeController(BerraContext context)
         {
             _context = context;
         }
+
 
         public async Task<IActionResult> Index(string sortOrder)
         {
@@ -42,6 +44,8 @@ namespace BerrasBio.Controllers
                     RemainingSeats = showing.Salon.MaxSeats - showing.Bookings.Sum(b => b.NumOfSeats)
                 });
             }
+
+
 
             switch (sortOrder)
             {
@@ -89,6 +93,7 @@ namespace BerrasBio.Controllers
 
             return View(showingVM);
         }
+
 
         [HttpPost]
         public async Task<IActionResult> BookTicket([Bind("NumOfSeats,ShowingID")] Booking booking)
