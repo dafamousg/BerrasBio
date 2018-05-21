@@ -9,8 +9,6 @@ namespace BerrasBio.Models.Entity
     {
         public int ID { get; set; }
         public string Title { get; set; }
-        public int RunningMinutes { get; set; }
-        public string Info { get; set; }
 
         public ICollection<Showing> Showings { get; set; }
     }

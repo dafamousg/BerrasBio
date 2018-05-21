@@ -11,17 +11,17 @@ namespace BerrasBio.Data
     {
         public BerraContext(DbContextOptions<BerraContext> options) : base(options) { }
 
-        public DbSet<Salon> Salons { get; set; }
         public DbSet<Movie> Movies { get; set; }
-        public DbSet<Showing> Showings { get; set; }
         public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Showing> Showings { get; set; }
+        public DbSet<Salon> Salons { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Salon>().ToTable("Salons");
             modelBuilder.Entity<Movie>().ToTable("Movies");
-            modelBuilder.Entity<Showing>().ToTable("Showings");
             modelBuilder.Entity<Booking>().ToTable("Bookings");
+            modelBuilder.Entity<Showing>().ToTable("Showings");
+            modelBuilder.Entity<Salon>().ToTable("Salons");
 
             modelBuilder.Entity<Booking>().HasOne(t => t.Showing).WithMany(sh => sh.Bookings).HasForeignKey(t => t.ShowingID);
             modelBuilder.Entity<Salon>().HasMany(s => s.Showings).WithOne(sh => sh.Salon).HasForeignKey(sh => sh.SalonID);
