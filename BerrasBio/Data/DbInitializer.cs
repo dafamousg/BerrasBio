@@ -50,8 +50,12 @@ namespace BerrasBio.Data
             {
                 new Showing{MovieID = 1, SalonID = 1, Date = DateTime.Parse("2018-07-01 18:15:00", CultureInfo.InvariantCulture)},
                 new Showing{MovieID = 2, SalonID = 1, Date = DateTime.Parse("2018-07-01 21:15:00", CultureInfo.InvariantCulture)},
-                new Showing{MovieID = 3, SalonID = 1, Date = DateTime.Parse("2018-07-03 18:15:00", CultureInfo.InvariantCulture)},
-                new Showing{MovieID = 4, SalonID = 1, Date = DateTime.Parse("2018-07-03 21:15:00", CultureInfo.InvariantCulture)}
+                new Showing{MovieID = 3, SalonID = 1, Date = DateTime.Parse("2018-07-02 18:15:00", CultureInfo.InvariantCulture)},
+                new Showing{MovieID = 4, SalonID = 1, Date = DateTime.Parse("2018-07-02 21:15:00", CultureInfo.InvariantCulture)},
+                new Showing{MovieID = 1, SalonID = 1, Date = DateTime.Parse("2018-07-03 18:15:00", CultureInfo.InvariantCulture)},
+                new Showing{MovieID = 2, SalonID = 1, Date = DateTime.Parse("2018-07-03 21:15:00", CultureInfo.InvariantCulture)},
+                new Showing{MovieID = 3, SalonID = 1, Date = DateTime.Parse("2018-07-04 18:15:00", CultureInfo.InvariantCulture)},
+                new Showing{MovieID = 4, SalonID = 1, Date = DateTime.Parse("2018-07-04 21:15:00", CultureInfo.InvariantCulture)}
             };
 
             foreach (var Show in Shows)
@@ -65,7 +69,11 @@ namespace BerrasBio.Data
                 new Booking{ShowingID = 1, NumOfSeats = 0},
                 new Booking{ShowingID = 2, NumOfSeats = 0},
                 new Booking{ShowingID = 3, NumOfSeats = 0},
-                new Booking{ShowingID = 4, NumOfSeats = 0}
+                new Booking{ShowingID = 4, NumOfSeats = 0},
+                new Booking{ShowingID = 5, NumOfSeats = 0},
+                new Booking{ShowingID = 6, NumOfSeats = 0},
+                new Booking{ShowingID = 7, NumOfSeats = 0},
+                new Booking{ShowingID = 8, NumOfSeats = 0}
             };
             foreach (var Ticket in bookings)
             {

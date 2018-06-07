@@ -89,8 +89,6 @@ namespace BerrasBio.Controllers
                 RemainingSeats = showing.Salon.MaxSeats - showing.Bookings.Sum(b => b.NumOfSeats)
             };
 
-            ViewData["MaxRemainingSeats"] = showingVM.RemainingSeats < 12 ? showingVM.RemainingSeats : 12;
-
             return View(showingVM);
         }
 

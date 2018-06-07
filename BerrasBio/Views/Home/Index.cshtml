@@ -36,7 +36,18 @@
                     @Html.DisplayFor(modelItem => item.Date)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.MovieTitle)
+                    @{
+                        if (item.RemainingSeats > 0)
+                        {
+                             @Html.DisplayFor(modelItem => item.MovieTitle)
+                        }
+                        else
+                        {
+                            <div id="SoldOutMovie">
+                                @Html.DisplayFor(modelItem => item.MovieTitle)
+                            </div>
+                        }
+                    }
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.SalonName)
